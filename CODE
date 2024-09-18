@@ -1,0 +1,32 @@
+import numpy as np
+i=0
+t=i+1
+categories = ['Electronics', 'Groceries', 'Clothing', 'Furniture', 'Stationery']
+sales_data = np.array([[120, 500, 230, 75, 45],  
+                       [130, 520, 210, 80, 40],  
+                       [125, 530, 220, 70, 50],  
+                       [140, 540, 200, 90, 60]])
+
+
+def tot_sales_per(sales_data):
+    return np.sum(sales_data, axis=0)
+
+totalsold = tot_sales_per(sales_data)
+print("Total units sold per category:", totalsold)
+
+total_sales_per_week = np.sum(sales_data, axis=1)
+print("Total sales per week:", total_sales_per_week)
+
+average_sales_per_category = np.mean(sales_data, axis=0)
+print("Average sales per category:", average_sales_per_category)
+
+firstweekbest = np.max(sales_data[0])
+print("First week Best performing: ",firstweekbest)
+firstweekworst = np.min(sales_data[0])
+print("First week Best performing: ",firstweekworst)
+secondweekbest = np.max(sales_data[1])
+print("First week Best performing: ",secondweekbest)
+thirdweekbest = np.max(sales_data[2])
+print("First week Best performing: ",thirdweekbest)
+fourthweekbest = np.max(sales_data[3])
+print("First week Best performing: ",fourthweekbest)
